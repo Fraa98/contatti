@@ -6,12 +6,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { InserimentoComponente } from './componenti/InserimentoComponente';
 
 import './App.css';
+import { ElencoContattiComp } from './componenti/ElencoContattiComp';
 
 function App() {
   return (
     <div className="App">
       <Container>
         <InserimentoComponente/>
+        <ElencoContattiComp/>
 
       </Container>
      

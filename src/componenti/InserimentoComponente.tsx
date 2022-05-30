@@ -1,7 +1,8 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Utente } from "../interfacce/Utente";
+
 
 
 export const InserimentoComponente:any = () => {
@@ -16,7 +17,9 @@ export const InserimentoComponente:any = () => {
         }
 
         axios.post<Utente>("http://localhost:4000/inserisci", varPersona).then((risultato) => {console.log(risultato)})    
-
+        evt.target.inputNome.value = "";
+        evt.target.inputCognome.value = "";
+        evt.target.inputTelefono.value = "";
         console.log(varPersona)
 
     }
